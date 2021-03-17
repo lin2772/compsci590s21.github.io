@@ -2,11 +2,30 @@
 layout: post
 title: Secure Two-party Computation in Sublinear Time
 subtitle: By Yanping Zhang and Rahul Ramesh
-tags: [Two-party computation, ORAM, Yao's Garbled Circuits]
+tags: [Two-party computation, ORAM, Yao Garbled Circuits]
 published: false
 ---
 
 # Introduction
+
+Current two-party computation models are based around building boolean or arithmetic circuits to access information. This can be seen with GMW, Yao's etc. However, any operation computed in this fashion must have at least a linear time. For example, if a user only accesses certain elements while executing a binary search, an adversary could gain information based on the user's access patterns.
+
+At the same time, modern day technologies require both the ability to work with large databases and the ability to prevent data leakage. A linear runtime is simply too slow in several use cases. The paper thus identifies two criterion of a new protocol.
+
+1. Using RAM as a starting point (instead of circuits) to compute sublinear functions
+2. Using preprocessing to improved the amortized runtime of running the same function multiple times
+
+The goal of this paper is to apply oblivious RAM principles to accomplish these criterion. 
+
+
+# Generic Protocol
+
+## Overview
+
+The paper's protcol is based on Oblivious RAM, or ORAM. ORAM allows a client to securely compute functions with the memory of a possibly adversarial server. The server 
+
+# Optimized Protocol
+
 
 <!---
 
@@ -146,4 +165,3 @@ Communication between parties can occur in a number of ways. However, It is crit
 Implementation of this protocol is quite slow. An oblivious transfer must be used for every AND (multiplication) gate. Communication must be done between all parties every round, which adds an additional layer of complexity. However, there are ways to optimize AND gate computation. If input wires between parties are already shared, multiple AND gates can be processed together, which implies that the number of rounds is proportional to the depth of the circuit.
 
 --->
-asdfas
