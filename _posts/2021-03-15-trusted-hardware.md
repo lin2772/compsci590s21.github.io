@@ -1,4 +1,9 @@
-# Trusted Hardware
+---
+layout: post
+title: Introducing Trusted Hardware
+subtitle: By Haozhan Sun and Yanping Zhang
+tags: [Trusted hardware]
+---
 
 
 ## What constitutes trusted hardware?
