@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Yao's Garbled Circuit and GMW Protocols
+title: GMW and Yao's Garbled Circuits
 subtitle: By Anurag Kashyap and Rahul Ramesh
-tags: [GMW, Yao's Garbled Circuits]
+tags: [GMW, Yao's Garbled Circuits, Oblivious Computation]
 ---
 
 ## Yao's Garbled Circuits
@@ -108,11 +108,11 @@ $P_2$ indexes this table based on its own bit shares, and chooses the correspond
 
 ## Generalization
 
-### Arithmetic Gates}
+### Arithmetic Gates
 
 Arithmetic gates can easily be reconstructed through combinations of the logic gates of AND, NOT, and XOR. For any additional gate, each player can generate an additional random bit mask and the two players can exchange them, to each build a share of the final answer.
 
-### >2 parties}
+### >2 parties
 
 A similar procedure can be used to apply the GMW idea to a setting with $l$ players. Consider the case where players $P_1, P_2, P_3, ..., P_l$ want to evaluate a boolean circuit. Each player $P_j$ secret-shared its own input by generating $l-1$ random bit masks of length $n$, and sending each mask to all other $P_{i \ne j}$.
 
