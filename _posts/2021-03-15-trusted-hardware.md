@@ -1,5 +1,11 @@
-# Trusted Hardware
+---
+layout: post
+title: Trusted Hardware
+subtitle: By Haozhan Sun and Yanping Zhang
+tags: [trusted hardware, SGX]
 
+
+# Trusted Hardware
 
 ## What constitutes trusted hardware?
 Many of us have heard of SGX and ARM TrustZone that can constitute the notion of trusted hardware. What are some properties of trusted hardware in general? 

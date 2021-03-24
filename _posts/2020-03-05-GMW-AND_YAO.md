@@ -5,7 +5,7 @@ subtitle: By Anurag Kashyap and Rahul Ramesh
 tags: [GMW, Yao's Garbled Circuits, Oblivious Computation]
 ---
 
-# Yao's Garbled Circuits
+## Yao's Garbled Circuits
 
 ### Introduction
 The fundamental problem in secure multiparty computation is to compute a function $F(x_1,x_2,\ldots)$ where the input $ x_i $ is known only to party $P_i$, in a way that no party should learn anything that they couldn't have deduced from their own input and the value of $ F(x_1, x_2, \ldots) $.
@@ -70,7 +70,7 @@ $P_1$ never communicates with $P_2$ after sending the garbled circuit and output
 ### Analysis
 Yao's protocol runs in constant rounds but the number of Oblivious transfers required is linear in the number of input gates in the circuit. Thus, the communication complexity can be high.
 
-# Goldreich-Micali-Wigderson (GMW) Protocol
+## Goldreich-Micali-Wigderson (GMW) Protocol
 
 ### Motivation
 
@@ -106,7 +106,7 @@ $P_2$ indexes this table based on its own bit shares, and chooses the correspond
 
 
 
-# Generalization
+## Generalization
 
 ### Arithmetic Gates
 
@@ -125,7 +125,7 @@ $= (a_i \oplus b_i) \forall\ i\ \oplus (a_i \oplus b_j) \forall\ i \ne j$
 Each step of this process can be computed pairwise by implenting the two player game as described above.
 
 
-# Notes
+## Notes
 
 ### Adversaries
 
