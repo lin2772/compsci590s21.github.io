@@ -3,6 +3,7 @@ layout: post
 title: Trusted Hardware
 subtitle: By Haozhan Sun and Yanping Zhang
 tags: [trusted hardware, SGX]
+---
 
 
 # Trusted Hardware
