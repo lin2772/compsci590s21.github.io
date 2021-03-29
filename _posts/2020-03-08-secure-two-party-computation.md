@@ -7,6 +7,8 @@ tags: [Two-party computation, ORAM, Yao Garbled Circuits]
 
 # Introduction
 
+We will be summarizing "Secure Two-party Computation in Sublinear Time" by Gordon et. al, found here: https://cs.gmu.edu/~gordon/ccs12.pdf.
+
 Current two-party computation models are based around building boolean or arithmetic circuits to access information. This can be seen with GMW, Yao's etc. However, any operation computed in this fashion must have at least a linear time. For example, if a user only accesses certain elements while executing a binary search, an adversary could gain information based on the user's access patterns.
 
 At the same time, modern day technologies require both the ability to work with large databases and the ability to prevent data leakage. A linear runtime is simply too slow in several use cases. The paper thus identifies two criterion of a new protocol.
@@ -41,7 +43,7 @@ The paper's protocol has three main functions: secure initialization, secure eva
 
 Importantly, each secure computation is run over a small input, which intuits the amortized runtime over numerous calls of the function.
 
-Formally, the paper argues that if the function can be computed in time t and space s, then the amortized runtime is O(t)*polylog(s), the client's space is O(log(s)), and the server's space is O(s)*polylog(s).
+Formally, the paper argues that if the function can be computed in time t and space s, then the amortized runtime is $O(t)*polylog(s)$, the client's space is $O(log(s))$, and the server's space is $O(s)*polylog(s)$.
 
 
 
