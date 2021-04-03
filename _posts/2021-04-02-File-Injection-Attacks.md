@@ -39,18 +39,18 @@ The second step is based on the observation that if k’ is the keyword correspo
 
 
 ### Recovery of Single Token
-The following figure shows the performance of our attack for recovering the keyword associated with a single token. According to the analysis, the server only needs to inject $\log(2T)=9$ files to process the attack. It can be observed that the inference attack performs quite well even with only a small fraction of leaked files, e.g., recovering the keyword about 70% of the time once only 20% of the files are leaked, and achieving a 30% recovery rate even when given only 1% of the files.
+The following figure shows the performance of our attack for recovering the keyword associated with a single token. According to the analysis, the server only needs to inject log(2T)=9 files to process the attack. It can be observed that the inference attack performs quite well even with only a small fraction of leaked files, e.g., recovering the keyword about 70% of the time once only 20% of the files are leaked, and achieving a 30% recovery rate even when given only 1% of the files.
 ![](https://i.imgur.com/QNc8NOu.png)
 
 
 ### Recovery of Multiple Tokens
-We have also provided experiments that target the recovery of the keywords associated with 100 tokens ($m=100$); The following figure shows the results for recovering tokens with our proposed file injection attack as well as the CGPR15 method. Both attacks do well when the fraction of leaked files is large, however, the recovery rate of the CFPR15 attack drops dramatically as the fraction of leaked files decreases. In contrast, our attack continues to perform well, recovering 65% of the keywords given access to 50% of the client’s files, and still recovering 20% of the keywords when only 10% of the client’s files have been leaked.
+We have also provided experiments that target the recovery of the keywords associated with 100 tokens (m=100); The following figure shows the results for recovering tokens with our proposed file injection attack as well as the CGPR15 method. Both attacks do well when the fraction of leaked files is large, however, the recovery rate of the CFPR15 attack drops dramatically as the fraction of leaked files decreases. In contrast, our attack continues to perform well, recovering 65% of the keywords given access to 50% of the client’s files, and still recovering 20% of the keywords when only 10% of the client’s files have been leaked.
 ![](https://i.imgur.com/iW8xaZQ.png)
 
 
 ## Countermeasure
 ### Keyword Padding
-The basic idea of **Keyword Padding** is to distort the real frequency of each keyword $k$ by randomly associating files that do not contain that keyword with $k$; The aforementioned padding is done at setup time when the client uploads its encrypted files to the server. To test the feasibility of keyword padding, we have provided similar evaluation experiments, and the results are shown in the following figure.
+The basic idea of **Keyword Padding** is to distort the real frequency of each keyword k by randomly associating files that do not contain that keyword with k; The aforementioned padding is done at setup time when the client uploads its encrypted files to the server. To test the feasibility of keyword padding, we have provided similar evaluation experiments, and the results are shown in the following figure.
 ![](https://i.imgur.com/axLD4ze.png)
 
  As shown in the previous figure, the recovery rate of our attacks degrades only slightly when keyword padding is used. This indicates that the keyword padding method is ineffective in defending against file injection attacks.
@@ -71,4 +71,5 @@ Our paper shows that file-injection attacks are devastating for query privacy in
 
 ## Reference
 [Enron](https://www.cs.cmu.edu/~enron/)
+
 [All Your Queries Are Belong to Us: The Power of File-Injection Attacks on Searchable Encryption](https://eprint.iacr.org/2016/172.pdf)
