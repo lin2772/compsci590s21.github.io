@@ -2,7 +2,7 @@
 layout: post
 title: File-Injection Attacks
 subtitle: By Weilie Lin and Chenghong Wang
-tags: [file injection attack, searchable encryption](/T79y4Yn0TGybeCd-ZN7OsA)
+tags: [file injection attack, searchable encryption]
 ---
 
 ## Introduction
