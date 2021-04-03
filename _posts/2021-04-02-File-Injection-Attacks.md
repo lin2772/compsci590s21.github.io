@@ -1,10 +1,10 @@
 ---
 layout: post
-title: File-Injection Attacks[^1]
+title: File-Injection Attacks
 subtitle: By Weilie Lin and Chenghong Wang
 tags: [file injection attack, searchable encryption](/T79y4Yn0TGybeCd-ZN7OsA)
 ---
-[^1]: https://eprint.iacr.org/2016/172.pdf
+
 ## Introduction
 Previously, we have learned powerful security techniques like secure two-party computation, oblivious RAM that eliminate information leakage during the communication with servers. However, due to the expensive cost, it’s hard to deploy those techniques. Researchers came up with another efficient method called searchable encryption (SE) that allows the client to search keywords over encrypted files stored on an untrusted server while preserving some degree of privacy. The design is efficient at the expense of allowing query patterns and file-access patterns to be revealed to the server. The leakage was first thought to be acceptable but turns out to cause sensitive data leakages. The file-injection attacks are designed to prove the serious leakage by showing that the server can determine the keywords corresponding to the tokens. Since the token for each keyword is deterministic, the server can learn the query pattern on repeated queries, additionally, the returned file identifiers reveal the file access pattern. 
 ## Binary-Search Attack
