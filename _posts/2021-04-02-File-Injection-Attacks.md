@@ -16,9 +16,10 @@ A possible countermeasure is to limit the number of keywords per indexed file to
 
 ## Hierarchical-Search Attack 
 The hierarchical-search attacks make use of the fact that the threshold countermeasure does not affect the binary-search attack with a small keyword universe K’ in K if |K’|<=2T. The attacks work in the following steps:
-> **1.** Partition the keyword universe into |K/T| subset and each subset contains T keywords. 
-> **2.** The server generates |K/T| files, each contains keywords from a subset ad injects files to learn which subset the client’s keyword lies in.
-> **3.** Then it uses the small-universe, binary-search attack on these subsets to determine the keyword.
+
+> 1. Partition the keyword universe into |K/T| subset and each subset contains T keywords. 
+> 2. The server generates |K/T| files, each contains keywords from a subset ad injects files to learn which subset the client’s keyword lies in.
+> 3. Then it uses the small-universe, binary-search attack on these subsets to determine the keyword.
 
 In step 2, the server injects |K/T| files. And in step 3, it injects |K/2T|\*|log2T| where T is the threshold of the maximum number of keywords in a file. So the total number to inject is |K/2T|\*(|log2T|+2). We can further eliminate the number of files injected since for each i the first file in the set F_i is the same as F_{i-1} and the server does not need to inject it again. Additionally, the server does not need to generate the last file in step 2 as if the keyword is not in other files, it will be in the last file. And the total number of the injected file becomes: |K/2T|\*(|log2T|+1)-1
 ## Attacks Using Partial Knowledge
@@ -32,9 +33,10 @@ The second step is based on the observation that if k’ is the keyword correspo
 
 ## Experiments 
 ### Experiment Setup
-> **Dataset**: To evaluate the attack, we use the Enron email dataset, consisting of 30,109 emails from the “sent mail” folder of 150 employees of the Enron corporation that were sent between 2000–2002. We extracted keywords from this dataset as in CGPR15: words were first stemmed using the standard Porter stemming algorithm, and we then removed 200 stop words such as “to,” “a,” etc. Then we pick the top 5000 most frequent keywords for the experiment.
-> **Threshold countermeasure**: $T\gets200$, the reason for picking this value is that only 3% of the files may contain more than this many keywords.
-> **Client query**: The client uniform randomly selects a keyword from the entire keyword space and generates a search query.
+
+> 1. **Dataset.** To evaluate the attack, we use the Enron email dataset, consisting of 30,109 emails from the “sent mail” folder of 150 employees of the Enron corporation that were sent between 2000–2002. We extracted keywords from this dataset as in CGPR15: words were first stemmed using the standard Porter stemming algorithm, and we then removed 200 stop words such as “to,” “a,” etc. Then we pick the top 5000 most frequent keywords for the experiment.
+> 2. **Threshold countermeasure.**: $T\gets200$, the reason for picking this value is that only 3% of the files may contain more than this many keywords.
+> 3. **Client query.**: The client uniform randomly selects a keyword from the entire keyword space and generates a search query.
 
 
 
